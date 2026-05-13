@@ -1,0 +1,111 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--c-text);
+  flex-shrink: 0;
+}
+
+.logoIcon { font-size: 1.4rem; }
+
+.logoText {
+  background: linear-gradient(90deg, #7c6df0, #5b8def);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+}
+
+.link {
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--c-muted);
+  transition: color var(--trans), background var(--trans);
+}
+
+.link:hover { color: var(--c-text); background: var(--c-border); }
+
+.active {
+  color: var(--c-text) !important;
+  background: var(--c-border);
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.email {
+  font-size: 0.82rem;
+  color: var(--c-muted);
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logout {
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid var(--c-border);
+  color: var(--c-text);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: border-color var(--trans), color var(--trans);
+}
+
+.logout:hover { border-color: var(--c-primary); color: var(--c-primary); }
+
+.loginLink {
+  font-size: 0.88rem;
+  color: var(--c-muted);
+  font-weight: 500;
+  transition: color var(--trans);
+}
+
+.loginLink:hover { color: var(--c-text); }
+
+.registerBtn {
+  padding: 7px 16px;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-primary2));
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity var(--trans);
+}
+
+.registerBtn:hover { opacity: 0.9; }

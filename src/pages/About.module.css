@@ -1,0 +1,103 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.textBlock {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 32px;
+  font-size: 0.95rem;
+  color: var(--c-muted);
+  line-height: 1.75;
+}
+
+.h3 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: 12px;
+}
+
+.list { display: flex; flex-direction: column; gap: 8px; padding-left: 4px; }
+.list li { font-size: 0.9rem; }
+
+.statsBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-content: start;
+}
+
+.statCard {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  transition: border-color var(--trans);
+}
+
+.statCard:hover { border-color: var(--c-primary); }
+
+.statNum {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-primary2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.statLabel { font-size: 0.8rem; color: var(--c-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+.teamTitle {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.teamCard {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+  transition: border-color var(--trans), transform var(--trans);
+}
+
+.teamCard:hover { border-color: var(--c-primary); transform: translateY(-4px); }
+
+.teamEmoji { font-size: 2.8rem; display: block; margin-bottom: 10px; }
+.teamName { font-family: var(--font-head); font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+.teamRole { font-size: 0.8rem; color: var(--c-muted); }
+
+.contacts {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
+
+.address { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; font-style: normal; color: var(--c-muted); font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .team { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,124 @@
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--c-muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color var(--trans);
+}
+
+.back:hover { color: var(--c-primary); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.banner {
+  height: 320px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji { font-size: 6rem; }
+
+.info { display: flex; flex-direction: column; }
+
+.levelBadge { align-self: flex-start; margin-bottom: 14px; }
+
+.title {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 14px;
+  line-height: 1.15;
+}
+
+.desc {
+  color: var(--c-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.92rem;
+}
+
+.meta strong { color: var(--c-text); font-weight: 600; }
+
+.enroll {
+  align-self: flex-start;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-primary2));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: opacity var(--trans), transform var(--trans);
+}
+
+.enroll:hover { opacity: 0.9; transform: scale(0.98); }
+
+.reviewsSection { display: flex; flex-direction: column; gap: 20px; }
+
+.reviewsTitle {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.reviewsList { display: flex; flex-direction: column; gap: 12px; }
+
+.review {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+}
+
+.reviewHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.reviewer { font-size: 0.85rem; color: var(--c-muted); font-weight: 500; }
+.rating { color: #fbbf24; font-size: 0.95rem; letter-spacing: 2px; }
+
+.reviewText { font-size: 0.92rem; line-height: 1.55; margin: 0 0 8px; }
+
+.date {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--c-muted);
+  letter-spacing: 0.04em;
+}
+
+.empty {
+  text-align: center;
+  color: var(--c-muted);
+  padding: 24px 0;
+  font-size: 0.92rem;
+}
+
+.loading { text-align: center; color: var(--c-muted); padding: 60px 0; }
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .banner { height: 200px; }
+  .title { font-size: 1.5rem; }
+}
